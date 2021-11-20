@@ -2,7 +2,7 @@
 /*      PROYECTO FINAL - CALENDARIO en LENGUAJE C      */
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h>  // LIMPIAR PANTALLA
 #include <time.h>   //funciones de tiempo
 
 int main()
@@ -15,11 +15,11 @@ int main()
 
 
 
-    time_t sisTime; 	//time_t es un typedef, asigno una varible de este tipo (sisTime);
-    struct tm *tiempo;	//Creo un puntero a la estructura tm, (ya definida en time.h).
+    time_t sisTime; 	// TIEMPO REAL
+    struct tm *tiempo;	// crear puntero
 
    
-    time(&sisTime);		           // "time" obtiene el tiempo del sistema y lo da a sisTime.
+    time(&sisTime);		           // "time" obtiene el tiempo desde nuestro sistema y lo da a sisTime.
     tiempo=localtime(&sisTime);   //Convierte los valores de sisTime a compatibles con la estructura tm y luego asigno ese valor a tiempo.
 
 
